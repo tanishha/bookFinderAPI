@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const dbConfig = require('./server/config/db.config')
+const dbConfig = require('./config/db.config')
 
 mongoose.connect(dbConfig.conxnUrl + '/' + dbConfig.dbName, {
     useUnifiedTopology: true,

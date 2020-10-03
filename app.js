@@ -7,16 +7,16 @@ const cors = require('cors')
 require('./db')
 
 //call routing level middleware
-const apiRoute = require('./server/routes/api.route')
+const apiRoute = require('./routes/api.route')
 
 //load third-party middleware
 app.use(morgan('dev'))
 
 //accept every incoming request
-app.use(cors()) 
+app.use(cors())
 
 //inbuilt middleware for parsing incoming data
-app.use(express.urlencoded({ 
+app.use(express.urlencoded({
     extended: true
 }))
 app.use(express.json()) //(for json)

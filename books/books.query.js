@@ -3,10 +3,10 @@ const BookModel = require('./books.model');
 function map_book_req(book, bookDetails) {
     if (bookDetails.title)
         book.title = bookDetails.title
-    if (bookDetails.image)
-        book.image = bookDetails.image
-    if (bookDetails.authors)
-        book.authors = bookDetails.authors
+    if (bookDetails.publisher)
+        book.publisher = bookDetails.publisher
+    if (bookDetails.previewLink)
+        book.previewLink = bookDetails.previewLink
 }
 
 function fetch(condition) {
@@ -24,7 +24,6 @@ function fetch(condition) {
                 }
             })
     })
-
 }
 
 function save(data) {
@@ -59,6 +58,5 @@ function remove(id) {
 module.exports = {
     fetch,
     save,
-
     remove
 }

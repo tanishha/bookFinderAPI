@@ -1,6 +1,4 @@
 const BookQuery = require('./books.query');
-const fs = require('fs')
-const path = require('path');
 
 function get(req, res, next) {
     const condition = {};
@@ -25,9 +23,8 @@ function remove(req, res, next) {
 }
 
 function insert(req, res, next) {
-    const data=req.body;
+    const data = req.body;
     console.log('req.body>>', req.body)
-    console.log('req.file>>', req.file)
     BookQuery.save(data)
         .then(function (data) {
             res.json(data)
