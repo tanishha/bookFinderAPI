@@ -1,6 +1,8 @@
 const mongodb = require('mongodb');
+const env = require('./envConfig')
+
 const MongoClient = mongodb.MongoClient;
-const conxnUrl = 'mongodb://localhost:27017';
+const conxnUrl = env.dbconxnUrl;
 const dbName = 'bookFinder';
 module.exports = {
     conxnUrl,
