@@ -1,1 +1,4 @@
-Backend API of bookFinder application.
+
+REST API for bookFinder application.
+
+
